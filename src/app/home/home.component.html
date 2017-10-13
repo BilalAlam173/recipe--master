@@ -1,0 +1,46 @@
+<div class="container-fluid" id="back">
+    <div class="row gap"></div>
+<div class="row">
+  <div class="col-lg-3"></div>
+  <div class="col-lg-2"><img class="animated slideInLeft" src="../../assets/logo.png"><h3 class="app-title">Recipe master</h3></div>
+  <div class="col-lg-4 "><h3 class="animated slideInRight tagline">"I never really cook from 
+    recipes. But the worst is when something turns out great and I can't figure out how to 
+    make it again!"<br><b class="author">Blake Lively</b></h3></div>
+  <div class="col-lg-3"></div>
+</div>
+<div class="row">
+  <!-- Sign in box -->  
+    <div  (click)="signin()" class="col-lg-6 animated slideInLeft box" matTooltip="sign in" [(class)]="form2">
+        <div *ngIf="signinFlag" class="img2">
+            <app-signin></app-signin>
+        </div>
+      <img *ngIf="!signinFlag" class=" img2" src="../../assets/login.png">
+    </div>
+    <!-- Sign in box -->
+
+    <!-- Sign up box -->
+  <div (click)="signup()"  class="col-lg-6 animated slideInRight" matTooltip="sign up" [(class)]="form">
+      <div *ngIf="signupFlag" class="img2">
+          <form class="example-form">
+          <mat-form-field class="example-full-width">
+              <input matInput placeholder="email">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="username">
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                  <input matInput placeholder="password">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="confirm password">
+                  </mat-form-field>
+                  <button mat-raised-button style="background-color:#00BF9A;color:white">sign up</button>
+            </form>
+      </div>
+    <img class=" img2" *ngIf="!signupFlag" src="../../assets/signup.png">
+    
+  </div>
+  <!-- Sign up box -->
+</div>
+<div class="row gap"></div>
+</div>

@@ -1,0 +1,72 @@
+/*
+#008975
+rgb(0, 170, 141)
+#00BF9A
+
+*/
+#back{
+    background-color: rgba(0, 0, 0,0.3);
+    transition-property: background-color;
+    transition-delay: 1ms;
+    transition-duration: 3s;
+}
+#back:hover{
+    background-color: #00BF9A;
+    transition-property: background-color;
+    transition-delay: 1ms;
+    transition-duration: 3s;
+    
+}
+.gap{
+    height: 20px;
+}
+.tagline{
+    font-family: myfont;
+    color:white;
+    margin-bottom: 20%;
+}
+img{
+    margin-top:10%;
+}
+.app-title{
+    font-family:'myFont';
+    font-weight:900;
+    margin-top:-4px;
+    color:black;
+}
+.author{
+    font-size: 22px;
+    font-weight: 600;
+    margin-top:10%;
+    color:#008975
+}
+.img2{
+    display: block;
+    margin: auto;
+    width: 40%;
+}
+.box{
+    height: 400px;
+    background-color: #008975;
+    border-radius: 500px 500px 500px 500px;
+    padding-top: 5%;
+    transition-property: background-color;
+    transition-delay: 1ms;
+    transition-duration: 2s;
+}
+.box:hover{
+    border-radius: 500px 500px 500px 500px;
+    background-color: rgb(0, 170, 141);
+    transition-property: background-color;
+    transition-delay: 1ms;
+    transition-duration: 2s;
+}
+.form{
+    height: 400px;
+    background-color: #F1F8E9;
+    border-radius: 500px 500px 500px 500px;
+    padding-top: 5%;
+    transition-property: background-color;
+    transition-delay: 1ms;
+    transition-duration: 2s;
+}

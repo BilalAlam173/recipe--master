@@ -1,16 +1,15 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-lg-12 header">
-      <div class="row">
-        <div class="col-lg-1 logo"><img src="../../assets/logo.png"></div>
-        <div class="col-lg-3 logo"><h2><b>Recipe master</b></h2></div>
+
+      <div class="row header">
+        <div class="col-lg-4 logo"><h3><b>  Recipe master</b></h3></div>
         <div class="col-lg-4"></div>
         <div class="col-lg-4">
-            <ul class="nav navbar-nav myNav">
-                <li class="active"><a href="#">Recipes book</a></li>
-                <li><a href="#">shopping list</a></li>
-              </ul></div>
+            <div class="dropdown">
+                <button class="btn my-btn dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Bilal Alam
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">settings</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" (click)="logout()">logout</a></li>
+                </ul>
+              </div>
       </div>
-    </div>
-  </div>
-</div>
+

@@ -5,3 +5,14 @@
     font-family: "myfont";
     src: url("assets/fonts/Geomanist-Regular.otf");
     }
+    .mat-tooltip {
+        color:black;
+        border-radius: 2px;
+        margin: 14px;
+        font-size: 14px;
+        font-family: myFont;
+        max-width: 250px;
+        padding-left: 8px;
+        padding-right: 8px;
+        background-color:green 
+    }

@@ -1,0 +1,19 @@
+.full-height{
+    height: 87vh;
+    width: 100%;
+    position: absolute;
+}
+.side-nav{
+    height: 87vh;
+    position: absolute;
+    background-color: #00796B;
+    width: 100%;
+    position: fixed;
+}
+
+.nav-item{
+    width: 100%;
+    height: 10%;
+    color: #C5E1A5;
+    
+}

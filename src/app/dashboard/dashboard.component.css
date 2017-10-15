@@ -1,0 +1,30 @@
+.header{
+    height:80px;
+    background-color: rgba(0, 170, 141,0.8);
+    border-radius: 0 0 3px 3px;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 2;
+}
+.side-nav{
+    height: 100vh;
+    position: fixed;
+    background-color: #00796B;
+}
+@media screen and (max-width: 600px) {
+    .side-nav {
+      visibility: hidden;
+      clear: both;
+      float: left;
+      margin: 10px auto 5px 20px;
+      width: 28%;
+      display: none;
+    }
+  }
+
+.content{
+    margin-top:100px;
+    height: 1000px;
+    border: 10px double green;
+}

@@ -8,22 +8,23 @@ import { MatFormFieldControl } from '@angular/material';
 export class HomeComponent implements OnInit {
   signinFlag= false;
   signupFlag= false;
-  form = 'col-lg-6 animated slideInRight box';
-  form2 = 'col-lg-6 animated slideInLeft box';
+  form = 'col-lg-5  slideInRight box';
+  form2 = 'col-lg-5  slideInLeft box';
+  tooltip= 'tooltip';
 
   constructor() { }
 
   signin() {
     console.log('signing');
-    this.form2 = 'col-lg-6 animated slideInLeft form';
-    this.form = 'col-lg-6 animated slideInRight box';
+    this.form2 = 'col-lg-5  slideInLeft form';
+    this.form = 'col-lg-5  slideInRight box';
     this.signinFlag = true;
     this.signupFlag = false;
   }
   signup() {
     console.log('signup');
-    this.form = 'col-lg-6 animated slideInRight form';
-    this.form2 = 'col-lg-6 animated slideInLeft box';
+    this.form = 'col-lg-5  slideInRight form';
+    this.form2 = 'col-lg-5  slideInLeft box';
     this.signupFlag = true;
     this.signinFlag = false;
   }

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material';
 import { MatInputModule } from '@angular/material';
 import { MatCardModule } from '@angular/material';
@@ -31,10 +32,13 @@ import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HomeComponent } from './home/home.component';
-
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { AuthService } from './components/services/auth.service';
 
 const appRoutes: Routes = [
-  { path: 'home',      component: HomeComponent },
+  { path: 'home',      component: HomeComponent , data: { animation: 'home' } },
+  { path: 'dashboard',      component: DashboardComponent , data: { animation: 'dashboard' }},
   { path: '', redirectTo: '/home', pathMatch: 'full'}
 ];
 export function routerTransition() {
@@ -70,7 +74,9 @@ function slideToLeft() {
     SignupComponent,
     SigninComponent,
     ProfileComponent,
-    HomeComponent
+    HomeComponent,
+    DashboardComponent,
+    NavigationComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -80,6 +86,7 @@ function slideToLeft() {
     BrowserModule,
     FormsModule,
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatTooltipModule,
@@ -89,7 +96,7 @@ function slideToLeft() {
     MatIconModule,
     MatInputModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -18,6 +18,9 @@ import { state } from '@angular/animations';
 import { style } from '@angular/animations';
 import { animate } from '@angular/animations';
 import { transition } from '@angular/animations';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 
 import { AppComponent } from './app.component';
@@ -41,6 +44,14 @@ const appRoutes: Routes = [
   { path: 'dashboard',      component: DashboardComponent , data: { animation: 'dashboard' }},
   { path: '', redirectTo: '/home', pathMatch: 'full'}
 ];
+export const firebaseConfig = {
+  apiKey: 'AIzaSyACBjiE9ZDoDMmbGKOxarGLD8h3njUBrwg',
+  authDomain: 'recipe-master-173.firebaseapp.com',
+  databaseURL: 'https://recipe-master-173.firebaseio.com',
+  projectId: 'recipe-master-173',
+  storageBucket: 'recipe-master-173.appspot.com',
+  messagingSenderId: '766277075631'
+};
 export function routerTransition() {
   return slideToLeft();
 }
@@ -91,6 +102,9 @@ function slideToLeft() {
     MatButtonModule,
     MatTooltipModule,
     MatMenuModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
     MatCardModule,
     MatToolbarModule,
     MatIconModule,

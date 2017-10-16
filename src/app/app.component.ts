@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {  OnInit } from '@angular/core';
 import {
   trigger,
   state,
@@ -7,6 +8,11 @@ import {
   transition,
   query,
 } from '@angular/animations';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { Observable } from 'rxjs/Observable';
+import * as firebase from 'firebase/app';
+import { Router } from '@angular/router' ;
 
 @Component({
   selector: 'app-root',
@@ -46,7 +52,11 @@ import {
     ])
   ]
 })
-export class AppComponent {
+export class AppComponent  {
+
+  constructor(private fireAuth: AngularFireAuth, private router: Router) {
+    console.log(fireAuth);
+  }
   // change the animation state
   getRouteAnimation(outlet) {
     return outlet.activatedRouteData.animation;
